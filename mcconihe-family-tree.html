@@ -6,297 +6,242 @@
 <title>The MacConnochie–McConihe Descent — Working Evidence Chart</title>
 <style>
   :root{
-    --paper:#FAF8F3; --ink:#24211C; --muted:#6E6759; --rule:#DCD5C6;
-    --doc-fill:#E7F2EC; --doc-line:#1D6E54; --doc-text:#0A4A38;
-    --unt-fill:#EDEBF8; --unt-line:#5A50B5; --unt-text:#37307E;
-    --trad-fill:#FBF0DC; --trad-line:#B07514; --trad-text:#6B4708;
-    --unk-fill:#FBEAEA; --unk-line:#A93434; --unk-text:#6E1F1F;
-    --serif:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;
+    --paper:#faf7f0; --ink:#2b2620; --faint:#6f6759; --rule:#d8d0c0;
+    --doc:#1b6e4b;   --doc-bg:#e9f3ec;   /* documented */
+    --unt:#2b5d8a;   --unt-bg:#e9f1f8;   /* documented person, line untracked */
+    --trad:#a66a00;  --trad-bg:#fdf3dd;  /* tradition / conjecture */
+    --unk:#a33327;   --unk-bg:#fbe9e6;   /* unknown — the gap */
+    --serif:"Iowan Old Style","Palatino Linotype","Book Antiqua",Palatino,Georgia,serif;
     --sans:-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
   }
   *{box-sizing:border-box}
-  body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:15px;line-height:1.6}
-  .page{max-width:980px;margin:0 auto;padding:40px 28px 64px}
-  .eyebrow{font-family:var(--sans);font-size:11.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted)}
-  h1{font-family:var(--serif);font-weight:600;font-size:34px;line-height:1.15;margin:.35em 0 .25em}
-  h2{font-family:var(--serif);font-weight:600;font-size:22px;margin:2.2em 0 .6em;border-bottom:1px solid var(--rule);padding-bottom:.35em}
-  .lede{max-width:70ch;color:#3B372F}
-  .caveat{margin:18px 0 0;padding:12px 16px;border-left:3px solid var(--trad-line);background:var(--trad-fill);color:var(--trad-text);font-size:13.5px;max-width:75ch}
-  .nameband{margin:34px 0 8px;padding:22px 20px;border:1px solid var(--rule);border-radius:10px;background:#fff}
-  .nameband .bandtitle{font-size:11.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin-bottom:14px}
-  .flow{display:flex;flex-wrap:wrap;align-items:center;gap:10px}
-  .pill{font-family:var(--serif);font-size:17px;padding:7px 14px;border-radius:999px;border:1px solid var(--rule);background:var(--paper);white-space:nowrap}
-  .pill small{display:block;font-family:var(--sans);font-size:10.5px;color:var(--muted);letter-spacing:.04em}
-  .arrowchar{color:var(--muted);font-size:18px}
-  .split{display:flex;flex-direction:column;gap:8px}
-  .legend{display:flex;flex-wrap:wrap;gap:18px;margin:22px 0 10px;font-size:13px}
-  .legend span{display:inline-flex;align-items:center;gap:7px}
-  .sw{width:14px;height:14px;border-radius:4px;display:inline-block;border:1px solid}
-  .chartwrap{border:1px solid var(--rule);border-radius:10px;background:#fff;padding:14px 8px;overflow-x:auto}
-  svg{display:block;margin:0 auto}
-  svg a{text-decoration:none}
-  .page > p a, footer a{color:#1D5FA0}
-  .bx{stroke-width:1.2}
-  .nm{font-family:var(--serif);font-size:14.5px;font-weight:600}
-  .dt{font-family:var(--sans);font-size:11.8px}
-  .nf{font-family:var(--sans);font-size:11px;font-style:italic}
-  .ln{stroke:#7A7365;stroke-width:1.2;fill:none}
-  .lnd{stroke:#A89F8D;stroke-width:1.2;fill:none;stroke-dasharray:5 4}
-  .glabel{font-family:var(--sans);font-size:11.5px;fill:#6E6759}
-  .idx{display:grid;grid-template-columns:1fr 1fr;gap:6px 36px}
-  .idx dt{font-weight:600;margin-top:10px}
-  .idx dt .tag{font-weight:400;font-size:11px;color:var(--muted);letter-spacing:.06em}
-  .idx dd{margin:0;font-size:13.5px;color:#3B372F}
-  .idx dd .src{color:var(--muted);font-size:12px}
-  .srclist{font-size:13.5px;color:#3B372F;max-width:80ch}
-  .srclist li{margin-bottom:7px}
-  .keyrow{font-size:12.5px;color:var(--muted);margin-top:10px;max-width:80ch}
-  footer{margin-top:48px;padding-top:14px;border-top:1px solid var(--rule);font-size:12.5px;color:var(--muted)}
-  @media (max-width:640px){ .idx{grid-template-columns:1fr} h1{font-size:27px} }
-  @media print{ .chartwrap{overflow:visible;border:none} body{background:#fff} .page{padding:0} a{color:inherit} }
+  body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--serif);line-height:1.55;font-size:17px}
+  .wrap{max-width:980px;margin:0 auto;padding:2.2rem 1.2rem 4rem}
+  .eyebrow{font-family:var(--sans);font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--faint)}
+  h1{font-size:2.1rem;line-height:1.15;margin:.35rem 0 .8rem;font-weight:700}
+  h2{font-size:1.35rem;margin:2.6rem 0 .7rem;border-bottom:1px solid var(--rule);padding-bottom:.3rem}
+  h3{font-size:1.05rem;margin:1.6rem 0 .4rem}
+  a{color:var(--unt);text-decoration:none;border-bottom:1px solid rgba(43,93,138,.35)}
+  a:hover{border-bottom-color:var(--unt)}
+  a:focus-visible{outline:2px solid var(--unt);outline-offset:2px;border-radius:2px}
+  p{margin:.55rem 0}
+  .lede{font-size:1.02rem}
+  .status{background:#f3eee2;border:1px solid var(--rule);border-radius:6px;padding: .8rem 1rem;font-size:.95rem;margin:1.1rem 0}
+  .updated{background:var(--doc-bg);border:1px solid #bcd9c9;border-radius:6px;padding:.8rem 1rem;font-size:.95rem;margin:1.1rem 0}
+  .updated .eyebrow{color:var(--doc)}
+
+  /* name spine */
+  .spine{display:flex;flex-wrap:wrap;gap:.45rem;align-items:stretch;margin:1rem 0 .4rem}
+  .spine .step{flex:1 1 150px;background:#fff;border:1px solid var(--rule);border-radius:6px;padding:.55rem .65rem;min-width:140px}
+  .spine .step b{display:block;font-size:.98rem}
+  .spine .step span{font-family:var(--sans);font-size:.72rem;color:var(--faint)}
+  .spine .arrow{align-self:center;color:var(--faint);font-family:var(--sans)}
+
+  /* legend */
+  .legend{display:flex;flex-wrap:wrap;gap:.6rem 1.2rem;font-family:var(--sans);font-size:.78rem;margin:1rem 0 1.6rem}
+  .legend span{display:inline-flex;align-items:center;gap:.4rem}
+  .sw{width:.85rem;height:.85rem;border-radius:3px;display:inline-block;border:1px solid rgba(0,0,0,.18)}
+
+  /* tree */
+  .tree{margin:1.2rem 0}
+  .rail{border-left:2px solid var(--rule);margin-left:1.05rem;padding-left:1.4rem}
+  .row{display:flex;flex-wrap:wrap;gap:.7rem;margin:.7rem 0}
+  .node{border-radius:7px;padding:.6rem .75rem;flex:1 1 205px;min-width:195px;border:1.5px solid;position:relative}
+  .node b{display:block;font-size:.99rem;line-height:1.3}
+  .node small{font-family:var(--sans);font-size:.74rem;color:inherit;opacity:.85;display:block;margin-top:.15rem;line-height:1.4}
+  .node a{border-bottom:none;color:inherit}
+  .node a:hover b{text-decoration:underline}
+  .t-doc {background:var(--doc-bg); border-color:var(--doc);  color:#123f2d}
+  .t-unt {background:var(--unt-bg); border-color:var(--unt);  color:#1c3f5e}
+  .t-trad{background:var(--trad-bg);border-color:var(--trad); color:#5c3c00}
+  .t-unk {background:var(--unk-bg); border-color:var(--unk);  color:#5e1d15}
+  .gapnote{font-family:var(--sans);font-size:.78rem;color:var(--unk);margin:.35rem 0;padding:.35rem .6rem;border-left:3px dotted var(--unk);background:rgba(163,51,39,.05);border-radius:0 4px 4px 0}
+  .branchlabel{font-family:var(--sans);font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--faint);margin:1.1rem 0 .2rem}
+
+  /* index */
+  dl.persons dt{font-weight:700;margin-top:1.05rem}
+  dl.persons dd{margin:0 0 .35rem;padding-left:0}
+  .src{font-family:var(--sans);font-size:.76rem;color:var(--faint)}
+  .tag{font-family:var(--sans);font-size:.68rem;padding:.08rem .45rem;border-radius:9px;border:1px solid;margin-left:.4rem;vertical-align:middle;white-space:nowrap}
+  .tag.doc {color:var(--doc); border-color:var(--doc)}
+  .tag.unt {color:var(--unt); border-color:var(--unt)}
+  .tag.trad{color:var(--trad);border-color:var(--trad)}
+  .tag.unk {color:var(--unk); border-color:var(--unk)}
+  blockquote{margin:.7rem 0;padding:.55rem .9rem;border-left:3px solid var(--rule);background:#fff;font-size:.95rem}
+  ol.sources{padding-left:1.3rem}
+  ol.sources li{margin:.5rem 0}
+  footer{margin-top:3rem;border-top:1px solid var(--rule);padding-top:1rem;font-size:.88rem;color:var(--faint)}
+  @media print{ body{font-size:12pt} .node{break-inside:avoid} }
 </style>
 </head>
 <body>
-<div class="page">
+<div class="wrap">
 
-<div class="eyebrow">Working evidence chart · prepared 9 July 2026</div>
-<p style="margin:0 0 10px"><a href="index.html">← Back to the full index of persons</a></p>
+<p class="eyebrow">Working evidence chart · prepared 9 July 2026 · revised 13 July 2026</p>
+<p><a href="index.html">&larr; Back to the full index of persons</a></p>
+
 <h1>The MacConnochie–McConihe descent</h1>
-<p class="lede">One family, one name, four spellings, three countries. This chart lays out the working hypothesis for the ancestry of John McConihe (born 22 December 1669, Argyllshire; emigrated to Londonderry, New Hampshire, 1718), tracing the family tradition of descent from the MacConnochie Campbells of Inverawe. Every box is color-coded by the strength of its evidence, and every person links to the index below.</p>
-<div class="caveat"><strong>Status:</strong> links shown in amber or red are <em>not established</em> to genealogical proof standard. They mark where the evidence currently points and where research is active — not settled conclusions. Documented boxes rest on the independent, converging work of Diarmid Campbell and Gordon MacGregor plus primary records.</div>
 
-<div class="nameband">
-  <div class="bandtitle">One name through the records — the spine of the hypothesis</div>
-  <div class="flow">
-    <span class="pill">Mac Dhonnchaidh<small>Gaelic · "son of Duncan"</small></span>
-    <span class="arrowchar">→</span>
-    <span class="pill">M'Connoquhie · MacConnochie<small>Argyll records, 1500s–1600s · "alias Campbell"</small></span>
-    <span class="arrowchar">→</span>
-    <span class="split">
-      <span class="pill">Maconochie<small>Lowlands / Midlothian</small></span>
-      <span class="pill">McConaghy · MacConaughey<small>Ulster, from the 1600s</small></span>
-    </span>
-    <span class="arrowchar">→</span>
-    <span class="pill">McConihe<small>New Hampshire · recorded "M°Conoghy" 1722/3</small></span>
-  </div>
+<p class="lede">One family, one name, four spellings, three countries. This chart lays out the working hypothesis for the ancestry of John McConihe (born 22&nbsp;December 1669, Argyllshire; emigrated to Londonderry, New Hampshire, 1718), tracing the family tradition of descent from the MacConnochie Campbells of Inverawe. Every box is color-coded by the strength of its evidence, and every person links to the index below. <b>The central open question of the whole research: who was John's father?</b></p>
+
+<div class="status"><b>Status:</b> links shown in amber or red are <i>not established</i> to genealogical proof standard. They mark where the evidence currently points and where research is active — not settled conclusions. Documented boxes rest on the independent, converging work of Diarmid Campbell and Gordon MacGregor plus primary records.</div>
+
+<div class="updated"><span class="eyebrow">Revised 13 July 2026</span><br>
+The printed Privy Council entry of 30 November 1613 (<i>RPC</i>, 1st ser., X, pp. 177–179) has now been <b>consulted directly</b> (HathiTrust page images of the University of California copy; NRS verification pending). It explicitly names <b>Archibald and Dougall</b> as sons of the Tutor — confirming Gordon MacGregor's reading — and lists <b>Lachlan and Duncan McDonachie Campbell</b> immediately beside them, unfiliated: possibly two further sons, and the likely source of the alternative name-trio recalled by Diarmid Campbell. It also shows <b>Patrick, the Tutor's brother, outlawed with his nephews</b>, and the Earl of Argyll disclaiming the whole group on oath. The full Red Book of Scotland Vol.&nbsp;3 entry for Campbell of Inverawe (pp. 781–790) has been read in full, yielding record citations RD1/167 (Barbara Graham's 1607 bond), RD1/277 (Patrick "MacDonochie alias Campbell," 1617), RPC V:241 (the Tutor, 1595) and RPC VI:442 (his brother Duncan, 1602).</div>
+
+<h2>One name through the records — the spine of the hypothesis</h2>
+<div class="spine">
+  <div class="step"><b>Mac Dhonnchaidh</b><span>Gaelic · "son of Duncan"</span></div>
+  <div class="arrow">→</div>
+  <div class="step"><b>M'Connoquhie · MacConnochie · McDonachie · McCondochie</b><span>Argyll records, 1500s–1600s · "alias Campbell" · the 1613 Privy Council forms</span></div>
+  <div class="arrow">→</div>
+  <div class="step"><b>Maconochie</b><span>Lowlands / Midlothian</span></div>
+  <div class="arrow">→</div>
+  <div class="step"><b>McConaghy · MacConaughey</b><span>Ulster, from the 1600s</span></div>
+  <div class="arrow">→</div>
+  <div class="step"><b>McConihe</b><span>New Hampshire · recorded "M<sup>c</sup>Conoghy" 1722/3</span></div>
 </div>
+<p style="font-size:.92rem">The 1613 record itself is now primary evidence for the pattern: the laird appears as "M<sup>c</sup>Donachie Campbell of Innerraw," one man is "servitor to M<sup>c</sup>Condochie" — the patronymic standing alone as the chief's name in an official government record. [RPC X:179]</p>
 
 <div class="legend">
-  <span><span class="sw" style="background:var(--doc-fill);border-color:var(--doc-line)"></span>Documented (two scholars converge)</span>
-  <span><span class="sw" style="background:var(--unt-fill);border-color:var(--unt-line)"></span>Documented person, line untracked</span>
-  <span><span class="sw" style="background:var(--trad-fill);border-color:var(--trad-line)"></span>Family tradition / conjecture</span>
-  <span><span class="sw" style="background:var(--unk-fill);border-color:var(--unk-line)"></span>Unknown — the research gap</span>
+  <span><span class="sw" style="background:var(--doc-bg);border-color:var(--doc)"></span> Documented (two scholars converge / primary record)</span>
+  <span><span class="sw" style="background:var(--unt-bg);border-color:var(--unt)"></span> Documented person, line untracked</span>
+  <span><span class="sw" style="background:var(--trad-bg);border-color:var(--trad)"></span> Family tradition / conjecture</span>
+  <span><span class="sw" style="background:var(--unk-bg);border-color:var(--unk)"></span> Unknown — the research gap</span>
 </div>
 
-<div class="chartwrap">
-<svg width="920" height="1160" viewBox="0 0 920 1160" role="img" aria-label="Tiered family tree from Duncan the progenitor to the New Hampshire McConihes, with the Meadowbank branch">
-<defs>
-<marker id="ah" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="#8A8374" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker>
-</defs>
+<div class="tree">
+  <div class="row">
+    <div class="node t-doc" style="flex:0 1 420px"><a href="#p-duncan"><b>Duncan Campbell</b><small>son of Gillespic of Lochawe · late 1300s · eponym — descendants are Mac Dhonnchaidh</small></a></div>
+  </div>
+  <div class="gapnote">≈4 undocumented generations, to the 1470 Lorn charter era</div>
+  <div class="row">
+    <div class="node t-doc" style="flex:0 1 420px"><a href="#p-arch1570"><b>Archibald Campbell of Inverawe</b><small>fl. c. 1570 · documented · MacConnochie Campbell</small></a></div>
+  </div>
+  <div class="rail">
+    <div class="row">
+      <div class="node t-doc"><a href="#p-dougall1583"><b>Dougall Campbell of Inverawe</b><small>laird · d. c. 1583 · left infant heir</small></a></div>
+      <div class="node t-doc"><a href="#p-tutor"><b>John dubh MacConnochie Campbell</b><small>"the Tutor" · c. 1557 – bef. 15 July 1607 · guardian of Inverawe, never owner · led gallowglasses in Ireland (claim under verification)</small></a></div>
+      <div class="node t-doc"><a href="#p-patduncan"><b>Patrick &amp; Duncan Campbell</b><small>the Tutor's younger brothers · Patrick outlawed 1613; "MacDonochie alias Campbell" 1617 · Duncan denounced 1602</small></a></div>
+    </div>
 
-<a href="#p-duncan"><g>
-<rect class="bx" x="310" y="20" width="300" height="72" rx="6" fill="var(--trad-fill)" stroke="var(--trad-line)"/>
-<text class="nm" x="460" y="42" text-anchor="middle" fill="var(--trad-text)">Duncan Campbell</text>
-<text class="dt" x="460" y="60" text-anchor="middle" fill="var(--trad-text)">son of Gillespic of Lochawe · late 1300s</text>
-<text class="nf" x="460" y="78" text-anchor="middle" fill="var(--trad-text)">eponym — descendants are Mac Dhonnchaidh</text>
-</g></a>
-<line class="lnd" x1="460" y1="92" x2="460" y2="124" marker-end="url(#ah)"/>
-<text class="glabel" x="472" y="112">≈4 undocumented generations, to the 1470 Lorn charter era</text>
+    <div class="branchlabel">Line of Dougall — the lairds</div>
+    <div class="row">
+      <div class="node t-doc"><a href="#p-lairds"><b>MacConnochie lairds — all traced</b><small>Archibald "the pupil," d. bef. 1648 (6 younger sons) → Lt-Col Dougall, d. 1666 → Archibald, d.s.p. 21 May 1705 · Inverawe sold 1765 · every main-line male 1640s–80s accounted for in Scotland</small></a></div>
+    </div>
 
-<a href="#p-arch1570"><g>
-<rect class="bx" x="310" y="130" width="300" height="72" rx="6" fill="var(--doc-fill)" stroke="var(--doc-line)"/>
-<text class="nm" x="460" y="152" text-anchor="middle" fill="var(--doc-text)">Archibald Campbell of Inverawe</text>
-<text class="dt" x="460" y="170" text-anchor="middle" fill="var(--doc-text)">fl. c. 1570 · documented</text>
-<text class="nf" x="460" y="188" text-anchor="middle" fill="var(--doc-text)">MacConnochie Campbell</text>
-</g></a>
+    <div class="branchlabel">Sons and household of the Tutor — the 30 November 1613 record</div>
+    <div class="row">
+      <div class="node t-unt"><a href="#p-iainog"><b>John, "Iain og"</b><small>to Lowlands, 1607 (RD1/167) · alias MacConnochie · no descendants traced</small></a></div>
+      <div class="node t-unt"><a href="#p-arch1613"><b>Archibald Campbell</b><small>rebel · "son of the Tutor of Innerraw," RPC X:179 · untracked after 1613</small></a></div>
+      <div class="node t-unt"><a href="#p-dugald1613"><b>Dougall Campbell</b><small>rebel · "brother of the said Archibald," RPC X:179 · untracked after 1613</small></a></div>
+      <div class="node t-unt" style="border-style:dashed"><a href="#p-lachduncan1613"><b>Lachlan &amp; Duncan McDonachie Campbell</b><small>rebels, 1613 · brothers to each other; Duncan "servitor to the said Archibald" · sonship to the Tutor possible but unproven</small></a></div>
+    </div>
 
-<path class="ln" d="M460 202 L460 226 L155 226 L155 244" marker-end="url(#ah)"/>
-<line class="ln" x1="460" y1="202" x2="460" y2="244" marker-end="url(#ah)"/>
-<path class="ln" d="M460 202 L460 226 L765 226 L765 244" marker-end="url(#ah)"/>
+    <div class="row">
+      <div class="node t-trad" style="flex:0 1 300px"><a href="#p-meadowbank"><b>Maconochies of Meadowbank</b><small>Midlothian · documented c. 1700s · conjectured from Iain og · name form: Maconochie</small></a></div>
+      <div class="node t-trad" style="flex:0 1 300px"><a href="#p-lordmeadowbank"><b>Allan Maconochie</b><small>Lord Meadowbank, 1796 · judges · their own Argyll tradition</small></a></div>
+    </div>
 
-<a href="#p-dougall1583"><g>
-<rect class="bx" x="15" y="250" width="280" height="72" rx="6" fill="var(--doc-fill)" stroke="var(--doc-line)"/>
-<text class="nm" x="155" y="272" text-anchor="middle" fill="var(--doc-text)">Dougall Campbell of Inverawe</text>
-<text class="dt" x="155" y="290" text-anchor="middle" fill="var(--doc-text)">laird · d. c. 1583 · left infant heir</text>
-<text class="nf" x="155" y="308" text-anchor="middle" fill="var(--doc-text)">MacConnochie Campbell</text>
-</g></a>
-<a href="#p-tutor"><g>
-<rect class="bx" x="320" y="250" width="280" height="72" rx="6" fill="var(--unt-fill)" stroke="var(--unt-line)"/>
-<text class="nm" x="460" y="272" text-anchor="middle" fill="var(--unt-text)">John dubh MacConnochie Campbell</text>
-<text class="dt" x="460" y="290" text-anchor="middle" fill="var(--unt-text)">"the Tutor" · c. 1557 – bef. July 1607</text>
-<text class="nf" x="460" y="308" text-anchor="middle" fill="var(--unt-text)">guardian of Inverawe, never owner</text>
-</g></a>
-<a href="#p-patduncan"><g>
-<rect class="bx" x="625" y="250" width="280" height="72" rx="6" fill="var(--doc-fill)" stroke="var(--doc-line)"/>
-<text class="nm" x="765" y="272" text-anchor="middle" fill="var(--doc-text)">Patrick &amp; Duncan Campbell</text>
-<text class="dt" x="765" y="290" text-anchor="middle" fill="var(--doc-text)">the Tutor's younger brothers</text>
-<text class="nf" x="765" y="308" text-anchor="middle" fill="var(--doc-text)">MacConnochie Campbells</text>
-</g></a>
+    <div class="gapnote">≈2 generations lost, c. 1613 – 1669 · the rebels were unrelaxed from horning and disclaimed on oath by the Earl of Argyll — outlawed men with no lord answering for them, structurally the likeliest emigrants · alternative pool: untracked younger sons of the laird line</div>
 
-<line class="ln" x1="155" y1="322" x2="155" y2="372" marker-end="url(#ah)"/>
-<path class="ln" d="M460 322 L460 350 L411 350 L411 372" marker-end="url(#ah)"/>
-<path class="ln" d="M460 322 L460 350 L609 350 L609 372" marker-end="url(#ah)"/>
-<path class="ln" d="M460 322 L460 350 L807 350 L807 372" marker-end="url(#ah)"/>
+    <div class="row">
+      <div class="node t-unk" style="flex:0 1 460px"><a href="#p-father"><b>Father of John — unknown</b><small>b. ~1630s–40s, Argyll or Ulster · Campbell alias MacConnochie? · leading pool: sons of the 1613 rebels (Archibald, Dougall; possibly Lachlan, Duncan) · <b>the research target</b></small></a></div>
+    </div>
 
-<a href="#p-lairds"><g>
-<rect class="bx" x="15" y="378" width="280" height="92" rx="6" fill="var(--doc-fill)" stroke="var(--doc-line)"/>
-<text class="nm" x="155" y="400" text-anchor="middle" fill="var(--doc-text)">MacConnochie lairds — all traced</text>
-<text class="dt" x="155" y="418" text-anchor="middle" fill="var(--doc-text)">Archibald, d. bef. 1648 (6 younger sons)</text>
-<text class="dt" x="155" y="436" text-anchor="middle" fill="var(--doc-text)">Lt-Col Dougall, d. 1666 → Archibald,</text>
-<text class="dt" x="155" y="454" text-anchor="middle" fill="var(--doc-text)">d.s.p. 21 May 1705 · Inverawe sold 1765</text>
-</g></a>
-<a href="#p-iainog"><g>
-<rect class="bx" x="320" y="378" width="182" height="72" rx="6" fill="var(--trad-fill)" stroke="var(--trad-line)"/>
-<text class="nm" x="411" y="400" text-anchor="middle" fill="var(--trad-text)">John, "Iain og"</text>
-<text class="dt" x="411" y="418" text-anchor="middle" fill="var(--trad-text)">to Lowlands, 1607</text>
-<text class="nf" x="411" y="436" text-anchor="middle" fill="var(--trad-text)">alias MacConnochie</text>
-</g></a>
-<a href="#p-arch1613"><g>
-<rect class="bx" x="518" y="378" width="182" height="72" rx="6" fill="var(--unt-fill)" stroke="var(--unt-line)"/>
-<text class="nm" x="609" y="400" text-anchor="middle" fill="var(--unt-text)">Archibald Campbell</text>
-<text class="dt" x="609" y="418" text-anchor="middle" fill="var(--unt-text)">rebel · fl. 1613</text>
-<text class="nf" x="609" y="436" text-anchor="middle" fill="var(--unt-text)">alias MacConnochie</text>
-</g></a>
-<a href="#p-dugald1613"><g>
-<rect class="bx" x="716" y="378" width="182" height="72" rx="6" fill="var(--unt-fill)" stroke="var(--unt-line)"/>
-<text class="nm" x="807" y="400" text-anchor="middle" fill="var(--unt-text)">Dugald Campbell</text>
-<text class="dt" x="807" y="418" text-anchor="middle" fill="var(--unt-text)">rebel · fl. 1613</text>
-<text class="nf" x="807" y="436" text-anchor="middle" fill="var(--unt-text)">alias MacConnochie</text>
-</g></a>
+    <div class="row">
+      <div class="node t-trad" style="flex:0 1 460px"><a href="#p-john1669"><b>John McConihe</b><small>b. 22 Dec 1669, Argyllshire · the immigrant ancestor · documented from 1718</small></a></div>
+    </div>
 
-<line class="lnd" x1="411" y1="450" x2="411" y2="504" marker-end="url(#ah)"/>
-<line class="lnd" x1="609" y1="450" x2="609" y2="504" marker-end="url(#ah)"/>
-<line class="lnd" x1="807" y1="450" x2="807" y2="504" marker-end="url(#ah)"/>
-
-<g>
-<rect class="bx" x="301" y="510" width="220" height="56" rx="6" fill="var(--unk-fill)" stroke="var(--unk-line)" stroke-dasharray="5 4"/>
-<text class="nm" x="411" y="532" text-anchor="middle" fill="var(--unk-text)">≈4 generations lost</text>
-<text class="dt" x="411" y="550" text-anchor="middle" fill="var(--unk-text)">c. 1607 – early 1700s</text>
-</g>
-<g>
-<rect class="bx" x="588" y="510" width="240" height="56" rx="6" fill="var(--unk-fill)" stroke="var(--unk-line)" stroke-dasharray="5 4"/>
-<text class="nm" x="708" y="532" text-anchor="middle" fill="var(--unk-text)">≈2 generations lost</text>
-<text class="dt" x="708" y="550" text-anchor="middle" fill="var(--unk-text)">c. 1613 – 1669</text>
-</g>
-
-<line class="lnd" x1="411" y1="566" x2="411" y2="614" marker-end="url(#ah)"/>
-<line class="lnd" x1="708" y1="566" x2="708" y2="614" marker-end="url(#ah)"/>
-<path class="lnd" d="M155 470 L155 598 L688 598 L688 614" marker-end="url(#ah)"/>
-<text class="glabel" x="168" y="590">alternative pool: untracked younger sons of the laird line</text>
-
-<a href="#p-meadowbank"><g>
-<rect class="bx" x="286" y="620" width="250" height="72" rx="6" fill="var(--trad-fill)" stroke="var(--trad-line)"/>
-<text class="nm" x="411" y="642" text-anchor="middle" fill="var(--trad-text)">Maconochies of Meadowbank</text>
-<text class="dt" x="411" y="660" text-anchor="middle" fill="var(--trad-text)">Midlothian · documented c. 1700s</text>
-<text class="nf" x="411" y="678" text-anchor="middle" fill="var(--trad-text)">name form: Maconochie</text>
-</g></a>
-<g>
-<rect class="bx" x="583" y="620" width="250" height="72" rx="6" fill="var(--unk-fill)" stroke="var(--unk-line)" stroke-dasharray="5 4"/>
-<text class="nm" x="708" y="642" text-anchor="middle" fill="var(--unk-text)">Father of John — unknown</text>
-<text class="dt" x="708" y="660" text-anchor="middle" fill="var(--unk-text)">b. ~1630s–40s, Argyll</text>
-<text class="nf" x="708" y="678" text-anchor="middle" fill="var(--unk-text)">Campbell alias MacConnochie?</text>
-</g>
-
-<line class="ln" x1="411" y1="692" x2="411" y2="724" marker-end="url(#ah)"/>
-<line class="lnd" x1="708" y1="692" x2="708" y2="724" marker-end="url(#ah)"/>
-
-<a href="#p-lordmeadowbank"><g>
-<rect class="bx" x="286" y="730" width="250" height="72" rx="6" fill="var(--doc-fill)" stroke="var(--doc-line)"/>
-<text class="nm" x="411" y="752" text-anchor="middle" fill="var(--doc-text)">Allan Maconochie</text>
-<text class="dt" x="411" y="770" text-anchor="middle" fill="var(--doc-text)">Lord Meadowbank, 1796 · judges</text>
-<text class="nf" x="411" y="788" text-anchor="middle" fill="var(--doc-text)">their own Argyll tradition</text>
-</g></a>
-<a href="#p-john1669"><g>
-<rect class="bx" x="583" y="730" width="250" height="72" rx="6" fill="var(--trad-fill)" stroke="var(--trad-line)"/>
-<text class="nm" x="708" y="752" text-anchor="middle" fill="var(--trad-text)">John McConihe</text>
-<text class="dt" x="708" y="770" text-anchor="middle" fill="var(--trad-text)">b. 22 Dec 1669, Argyllshire</text>
-<text class="nf" x="708" y="788" text-anchor="middle" fill="var(--trad-text)">the immigrant ancestor</text>
-</g></a>
-
-<line class="lnd" x1="708" y1="802" x2="708" y2="834" marker-end="url(#ah)"/>
-
-<a href="#p-derry"><g>
-<rect class="bx" x="583" y="840" width="250" height="72" rx="6" fill="var(--trad-fill)" stroke="var(--trad-line)"/>
-<text class="nm" x="708" y="862" text-anchor="middle" fill="var(--trad-text)">Londonderry, Ireland</text>
-<text class="dt" x="708" y="880" text-anchor="middle" fill="var(--trad-text)">1678 · tradition · 1689 siege</text>
-<text class="nf" x="708" y="898" text-anchor="middle" fill="var(--trad-text)">Ulster form: McConaghy</text>
-</g></a>
-
-<line class="ln" x1="708" y1="912" x2="708" y2="944" marker-end="url(#ah)"/>
-
-<a href="#p-nh"><g>
-<rect class="bx" x="583" y="950" width="250" height="72" rx="6" fill="var(--doc-fill)" stroke="var(--doc-line)"/>
-<text class="nm" x="708" y="972" text-anchor="middle" fill="var(--doc-text)">Londonderry, New Hampshire</text>
-<text class="dt" x="708" y="990" text-anchor="middle" fill="var(--doc-text)">1718 · lot recorded 1722/3</text>
-<text class="nf" x="708" y="1008" text-anchor="middle" fill="var(--doc-text)">recorded "M°Conoghy"</text>
-</g></a>
-
-<line class="ln" x1="708" y1="1022" x2="708" y2="1054" marker-end="url(#ah)"/>
-
-<a href="#p-isaac"><g>
-<rect class="bx" x="583" y="1060" width="250" height="72" rx="6" fill="var(--doc-fill)" stroke="var(--doc-line)"/>
-<text class="nm" x="708" y="1082" text-anchor="middle" fill="var(--doc-text)">New Hampshire descendants</text>
-<text class="dt" x="708" y="1100" text-anchor="middle" fill="var(--doc-text)">John of Merrimack → Isaac, 1787–1867</text>
-<text class="nf" x="708" y="1118" text-anchor="middle" fill="var(--doc-text)">name frozen as McConihe</text>
-</g></a>
-</svg>
+    <div class="row">
+      <div class="node t-trad"><a href="#p-derry"><b>Londonderry, Ireland</b><small>1678 · tradition · 1689 siege · Ulster form: McConaghy</small></a></div>
+      <div class="node t-doc"><a href="#p-nh"><b>Londonderry, New Hampshire</b><small>1718 · lot recorded 1722/3 · recorded "M<sup>c</sup>Conoghy"</small></a></div>
+      <div class="node t-doc"><a href="#p-isaac"><b>New Hampshire descendants</b><small>John of Merrimack → Isaac, 1787–1867 · name frozen as McConihe</small></a></div>
+    </div>
+  </div>
 </div>
 
-<h2>Index of persons</h2>
-<dl class="idx">
-  <div>
-    <dt id="p-duncan">Duncan Campbell <span class="tag">· progenitor, late 1300s</span></dt>
-    <dd>Eponym of the kindred — his descendants are Mac Dhonnchaidh, "sons of Duncan." Both modern scholars converge on Duncan, son of Gillespic (Archibald) Campbell of Lochawe; a Great Seal charter of 15 March 1369 names an ancestral Duncan in the barony of Lochawe. <span class="src">[DC · RBS3]</span></dd>
-    <dt id="p-arch1570">Archibald Campbell of Inverawe <span class="tag">· fl. c. 1570</span></dt>
-    <dd>Laird of Inverawe; father of Dougall, John dubh, Patrick, and Duncan. <span class="src">[GM · DC]</span></dd>
-    <dt id="p-dougall1583">Dougall Campbell of Inverawe <span class="tag">· d. c. 1583</span></dt>
-    <dd>Laird; died leaving an infant heir, Archibald ("the pupil"), which brought his brother John dubh to power as Tutor. <span class="src">[DC]</span></dd>
-    <dt id="p-tutor">John dubh MacConnochie Campbell, Tutor of Inverawe <span class="tag">· c. 1557 – bef. July 1607</span></dt>
-    <dd>Guardian of Inverawe for ~20 years; ruled the kindred without owning it. In 1596 English intelligence reported him ready to lead 1,000 men to Ireland to aid Tyrone — he had "friends in Ireland." Said to have been killed by his nephew on the pupil's coming of age. <span class="src">[DC · GM]</span></dd>
-    <dt id="p-patduncan">Patrick &amp; Duncan Campbell <span class="tag">· the Tutor's brothers</span></dt>
-    <dd>Younger brothers of Dougall and John dubh. Patrick "in Auchreoch" (1597) possibly the Patrick in Duchollie whose son gave sasine in 1633. <span class="src">[DC · GM]</span></dd>
-    <dt id="p-lairds">The lairds of Inverawe <span class="tag">· 1607–1705, all traced</span></dt>
-    <dd>Archibald the pupil (d. bef. 1648, six younger sons); Lt-Col Dougall (second-in-command of Argyll's 1642 regiment for Ireland, d. 1666); Archibald, Governor of Duart, d.s.p. 21 May 1705. Estate passed via his brother Duncan of Crunachy's son; sold 1765. Every main-line male in the 1640s–80s is accounted for in Scotland. <span class="src">[DC · RBS3]</span></dd>
-    <dt id="p-iainog">John Campbell, "Iain og" <span class="tag">· son of the Tutor</span></dt>
-    <dd>Only legitimate son, by Barbara Graham. Named with his mother in her 1607 bond to George Schaw as she departed for the Lowlands. Married the widow of William M'Clellan of Mullock. No descendants traced — the root of the Meadowbank conjecture. <span class="src">[DC 84–85 · GM corr.]</span></dd>
-  </div>
-  <div>
-    <dt id="p-arch1613">Archibald Campbell <span class="tag">· son of the Tutor, fl. 1613</span></dt>
-    <dd>Named with his brother Dugald, "sons to the tutor of Inverawe," in Colquhoun of Luss's Privy Council complaint of 30 Nov 1613 against Clan Gregor and their assisters. Untracked thereafter. Candidate ancestor of the Ulster line. <span class="src">[RPC · GM corr.]</span></dd>
-    <dt id="p-dugald1613">Dugald Campbell <span class="tag">· son of the Tutor, fl. 1613</span></dt>
-    <dd>As above — the second rebel brother; untracked after 1613. Candidate ancestor of the Ulster line. <span class="src">[RPC · GM corr.]</span></dd>
-    <dt id="p-meadowbank">Maconochies of Meadowbank <span class="tag">· Midlothian</span></dt>
-    <dd>Edinburgh legal family, documented from the early 1700s; acquired the Meadowbank estate mid-1700s. Their own tradition claims Argyll descent; no pre-1700 Argyll property record found (consistent with a landless origin). A pedigree sits in Argyll Papers bundle 368 at Inveraray. <span class="src">[GM corr. · ARG-11-02-109]</span></dd>
-    <dt id="p-lordmeadowbank">Allan Maconochie, Lord Meadowbank <span class="tag">· 1748–1816</span></dt>
-    <dd>Court of Session judge from 1796; the title later held by his son Alexander — the "chief" named in the 1867 McConihe memoir. Under the hypothesis, cousins of the American line, not ancestors. <span class="src">[IM · NRS NG3/4/31]</span></dd>
-    <dt id="p-john1669">John McConihe <span class="tag">· b. 22 Dec 1669, Argyllshire</span></dt>
-    <dd>The immigrant ancestor. Birth date and Argyllshire origin from family tradition; his father is the open research question. <span class="src">[IM · BC · DB]</span></dd>
-    <dt id="p-derry">Londonderry, Ireland <span class="tag">· 1678, tradition</span></dt>
-    <dd>Family tradition places the household's relocation to Derry in 1678 and John in the 1689 siege. Not in the 1867 memoir — carried by the Bureau County (1885) and DuBin streams. Ulster name form: McConaghy. <span class="src">[BC · DB]</span></dd>
-    <dt id="p-nh">Londonderry, New Hampshire <span class="tag">· 1718, documented</span></dt>
-    <dd>John arrived with the Ulster-Scots settlers of Nutfield, 1718; home lot recorded 25 Feb 1722/3 as "M°Conoghy." <span class="src">[ER II:80]</span></dd>
-    <dt id="p-isaac">New Hampshire descendants <span class="tag">· to Isaac McConihe, 1787–1867</span></dt>
-    <dd>John of Merrimack, then Isaac McConihe of Troy, N.Y. (b. 22 Aug 1787), whose 1867 memorial volume preserves the family tradition — including the names Inverawe, Maconochy, and Meadowbank. <span class="src">[IM · ER]</span></dd>
-  </div>
+<h2>The 30 November 1613 record — now consulted</h2>
+<p>The complaint by Alexander Colquhoun of Luss and others against the Clan Gregor and their assisters, heard at Edinburgh on 30 November 1613, has been read in the printed <i>Register of the Privy Council</i>, First Series, Vol. X, pp. 177–179 (record: Decreta June 1612–Dec. 1613, Fol. 278a–279b). The pursuers are the Colquhoun kindred and some five hundred herried tenants of Luss; the defenders are rebels unrelaxed from hornings of 27 &amp; 29 May and 1 &amp; 3 June 1613. Among them, verbatim:</p>
+<blockquote>"…Archibald M<sup>c</sup>Donachie Campbell, son of the Tutor of Innerraw, Dougall M<sup>c</sup>Condochie Campbell, brother of the said Archibald, Lauchlane M<sup>c</sup>Donachie Campbell, Duncane, his brother, servitor to the said Archibald, Patrik M<sup>c</sup>Donachie Campbell 'father bruther' to the Laird of Innerraw…"</blockquote>
+<p>The pursuers argued the Earl of Argyll was answerable for the defenders as his tenants; the Earl, personally present, swore they were not, and the Lords assoilzied him. None of the four McDonachie Campbell kinsmen is traced in the record thereafter. <b>Implication for the main question:</b> the candidate pool of emigrant ancestors now potentially numbers four rebel kinsmen of the Tutor's generation and household — outlawed, disclaimed by their chief, and invisible to Scottish records after 1613 — any of whom could be the grandfather of John, b. 1669.</p>
+
+<h2 id="index">Index of persons</h2>
+<dl class="persons">
+
+<dt id="p-duncan">Duncan Campbell · progenitor, late 1300s <span class="tag doc">documented</span></dt>
+<dd>Eponym of the kindred — his descendants are Mac Dhonnchaidh, "sons of Duncan." Both modern scholars converge on Duncan, son of Gillespic (Archibald) Campbell of Lochawe; a Great Seal charter of 15 March 1369 names an ancestral Duncan in the barony of Lochawe. <span class="src">[DC · RBS3]</span></dd>
+
+<dt id="p-arch1570">Archibald Campbell of Inverawe · fl. c. 1570 <span class="tag doc">documented</span></dt>
+<dd>Laird of Inverawe; father of Dougall, John dubh, Patrick, and Duncan. <span class="src">[GM · DC]</span></dd>
+
+<dt id="p-dougall1583">Dougall Campbell of Inverawe · d. c. 1583 <span class="tag doc">documented</span></dt>
+<dd>Laird; died leaving an infant heir, Archibald ("the pupil"), which brought his brother John dubh to power as Tutor. <span class="src">[DC]</span></dd>
+
+<dt id="p-tutor">John dubh MacConnochie Campbell, Tutor of Inverawe · c. 1557 – bef. 15 July 1607 <span class="tag doc">documented</span></dt>
+<dd>Guardian of Inverawe for ~20 years; ruled the kindred without owning it — hence no sasine trail. Subject of a Privy Council complaint, 2 December 1595, for having "spuilyied the whole goods and plenishing" at Ardowaneck in Breadalbane [RPC V:241]. In 1596 English intelligence reported him ready to lead 1,000 men to Ireland to aid Tyrone — he had "friends in Ireland"; the Clan Campbell Society (North America) further states he led the Scots gallowglasses fighting in Ireland at the end of the 16th century (basis being sought from Diarmid Campbell — if verified, a direct family link to Ireland two generations before the 1678 migration). Said to have been killed by his nephew on the pupil's coming of age; the record shows only that he had died by 15 July 1607, when his widow granted her bond [RD1/167]. <span class="src">[DC · GM · RBS3 · RPC · CCSNA]</span></dd>
+
+<dt id="p-patduncan">Patrick &amp; Duncan Campbell · the Tutor's brothers <span class="tag doc">documented</span></dt>
+<dd><b>Patrick</b>, tacksman of DubhChoille: named among the unrelaxed rebels of 30 Nov 1613 as "Patrik M<sup>c</sup>Donachie Campbell, 'father bruther' [paternal uncle] to the Laird of Innerraw," placed at Acharne with his own servitors [RPC X:179]; four years later, as "Patrick MacDonochie alias Campbell," styled uncle to Archibald of Inverawe in his renunciation of the two merk lands of Auchnacraig to Hugh MacCorquodale of Phantilands, 6 Nov 1617 [RD1/277] — a family member appearing under the patronymic in a legal record. <b>Duncan</b>: denounced rebel by the Privy Council, 6 August 1602, for the theft of five cows with calves from Andrew MacBaith in Hilton of Maler (Nov 1598) [RPC VI:442]. <span class="src">[RPC · RBS3 · DC · GM]</span></dd>
+
+<dt id="p-lairds">The lairds of Inverawe · 1607–1705, all traced <span class="tag doc">documented</span></dt>
+<dd>Archibald the pupil (d. bef. 1648, six younger sons); Lt-Col Dougall (second-in-command of Argyll's 1642 regiment for Ireland, d. 1666); Archibald, Governor of Duart, d.s.p. 21 May 1705. Estate passed via his brother Duncan of Crunachy's son; sold 1765. Every main-line male in the 1640s–80s is accounted for in Scotland. Note: the 1722 entail of the later Archibald of Inverawe names his brothers <i>Dugald, Lachlan and Alexander</i> — a recurring Dugald/Lachlan name-cluster in the family, and the likely source of the alternative trio recalled in correspondence for the 1613 entry. <span class="src">[DC · RBS3]</span></dd>
+
+<dt id="p-iainog">John Campbell, "Iain og" · son of the Tutor <span class="tag unt">documented · untracked</span></dt>
+<dd>Only legitimate son, by Barbara Graham. Named with his mother in her bond of 15 July 1607 to George Schaw of Knockhill for 200 merks Scots [RD1/167] as she departed for the Lowlands. Married the widow of William M'Clellan of Mullock. No descendants traced — the root of the Meadowbank conjecture. <span class="src">[DC 84–85 · GM corr. · RBS3]</span></dd>
+
+<dt id="p-arch1613">Archibald Campbell · son of the Tutor, fl. 1613 <span class="tag unt">documented · untracked</span></dt>
+<dd>Explicitly styled "son of the Tutor of Innerraw" in the Privy Council complaint of 30 Nov 1613 (Colquhoun of Luss v. Clan Gregor and assisters), now consulted in the printed register [RPC X:179]. Unrelaxed from hornings of May–June 1613; the Earl of Argyll disclaimed him on oath. Untracked thereafter. A leading candidate grandfather of the immigrant line. <span class="src">[RPC X:177–179 · GM corr. · RBS3]</span></dd>
+
+<dt id="p-dugald1613">Dougall Campbell · son of the Tutor, fl. 1613 <span class="tag unt">documented · untracked</span></dt>
+<dd>"Dougall M<sup>c</sup>Condochie Campbell, brother of the said Archibald" — the second explicitly filiated rebel son [RPC X:179]. Same outlawry, same disappearance from the record. Candidate grandfather of the immigrant line. <span class="src">[RPC X:177–179 · GM corr. · RBS3]</span></dd>
+
+<dt id="p-lachduncan1613">Lachlan &amp; Duncan McDonachie Campbell · fl. 1613 <span class="tag unt">documented · filiation unproven</span></dt>
+<dd>Named immediately after the Tutor's sons in the 1613 defender list: "Lauchlane M<sup>c</sup>Donachie Campbell, Duncane, his brother, servitor to the said Archibald" [RPC X:179]. The record ties them only to each other and to Archibald's service — it does <i>not</i> call them sons of the Tutor. They may be two further, unfiliated sons (relevant to the Tutor's visit to Finlarig in June 1597 with three sons) or close kin in his household. Either way: outlawed 1613, untracked after, and within the candidate pool for the emigrant ancestor. <span class="src">[RPC X:179]</span></dd>
+
+<dt id="p-meadowbank">Maconochies of Meadowbank · Midlothian <span class="tag trad">conjecture</span></dt>
+<dd>Edinburgh legal family, documented from the early 1700s; acquired the Meadowbank estate mid-1700s. Their own tradition claims Argyll descent; no pre-1700 Argyll property record found (consistent with a landless origin). A pedigree sits in Argyll Papers bundle 368 at Inveraray. <span class="src">[GM corr. · ARG-11-02-109]</span></dd>
+
+<dt id="p-lordmeadowbank">Allan Maconochie, Lord Meadowbank · 1748–1816 <span class="tag trad">tradition</span></dt>
+<dd>Court of Session judge from 1796; the title later held by his son Alexander — the "chief" named in the 1867 McConihe memoir. Under the hypothesis, cousins of the American line, not ancestors. <span class="src">[IM · NRS NG3/4/31]</span></dd>
+
+<dt id="p-father">Father of John — unknown · b. ~1630s–40s <span class="tag unk">unknown</span></dt>
+<dd>The open research question and the goal of the whole project. Leading candidate pool, sharpened by the 1613 record: a son of one of the four outlawed McDonachie Campbell kinsmen — Archibald or Dougall (sons of the Tutor), or Lachlan or Duncan (possible sons) — all unrelaxed rebels disclaimed by Argyll on oath and invisible to Scottish records after 30 Nov 1613. Secondary pool: untracked younger sons of the laird line (six sons of the pupil, d. bef. 1648). All documented main-line males of the window are accounted for in Scotland. Paths to him: Argyll parish registers; bundle 368 pedigrees; Ulster records under McConaghy-type forms; Y-DNA. <span class="src">[analysis of RPC X · DC · RBS3 · GM corr.]</span></dd>
+
+<dt id="p-john1669">John McConihe · b. 22 Dec 1669, Argyllshire <span class="tag trad">tradition → documented 1718</span></dt>
+<dd>The immigrant ancestor. Birth date and Argyllshire origin from family tradition; his father is the open research question. <span class="src">[IM · BC · DB]</span></dd>
+
+<dt id="p-derry">Londonderry, Ireland · 1678, tradition <span class="tag trad">tradition</span></dt>
+<dd>Family tradition places the household's relocation to Derry in 1678 and John in the 1689 siege. Not in the 1867 memoir — carried by the Bureau County (1885) and DuBin streams. Ulster name form: McConaghy. <span class="src">[BC · DB]</span></dd>
+
+<dt id="p-nh">Londonderry, New Hampshire · 1718, documented <span class="tag doc">documented</span></dt>
+<dd>John arrived with the Ulster-Scots settlers of Nutfield, 1718; home lot recorded 25 Feb 1722/3 as "M<sup>c</sup>Conoghy." <span class="src">[ER II:80]</span></dd>
+
+<dt id="p-isaac">New Hampshire descendants · to Isaac McConihe, 1787–1867 <span class="tag doc">documented</span></dt>
+<dd>John of Merrimack, then Isaac McConihe of Troy, N.Y. (b. 22 Aug 1787), whose 1867 memorial volume preserves the family tradition — including the names Inverawe, Maconochy, and Meadowbank. <span class="src">[IM · ER]</span></dd>
+
 </dl>
 
 <h2>Sources</h2>
-<ol class="srclist">
-  <li><strong>[DC]</strong> Campbell, Diarmid A. <em>Seven Generations of the MacConnochie Campbells of Inverawe (1470–1705)</em>, Vol. I of <em>A History of the MacConnochie Campbells of Inverawe</em>. Privately published, 2011. Esp. pp. 84–85 (Iain og, Ireland, Meadowbank), the Tutor chapter, and the Archibald of Inverawe chapters.</li>
-  <li><strong>[RBS3]</strong> MacGregor, Gordon. <em>The Red Book of Scotland</em>, 5th ed. (2025), Vol. 3: Buchanan–Campbell — Campbell of Inverawe (p. 781), Kilmartin (p. 791), Shirvan (p. 798), and Campbell of Argyll.</li>
-  <li><strong>[GM corr.]</strong> MacGregor, Gordon. Correspondence with James McConihe, July 2026 — the Tutor's three surviving sons; the 1607 Schaw bond; negative search of Argyll Sasines and Inveraray Bonds for Meadowbank.</li>
-  <li><strong>[RPC]</strong> <em>Register of the Privy Council of Scotland</em> — complaint of Alexander Colquhoun of Luss and others against Clan Gregor and assisters, 30 November 1613 (full printed entry to be consulted).</li>
-  <li><strong>[ARG]</strong> Argyll Papers, Inveraray Castle — bundle 368 (ARG-11-02-109), pedigrees of the "Clan Dhonachie or Maconochies" incl. Meadowbank, compiled by Niall Campbell, 10th Duke of Argyll (copies requested).</li>
-  <li><strong>[W]</strong> Wimberley, Capt. Douglas. <em>Memorials of Four Old Families</em>. Inverness, 1894 — Kilmartin note and the 1656 Duncanson–Stronchormaig marriage contract.</li>
-  <li><strong>[F]</strong> Scott, Hew. <em>Fasti Ecclesiae Scoticanae</em>, Vol. 4 — John Duncanson, minister at Kilmartin, adm. 1655, deprived 1662.</li>
-  <li><strong>[ER]</strong> Browne, George Waldo (ed.). <em>Early Records of Londonderry, Windham, and Derry, N.H.</em> Vol. II (1911), p. 80 and passim.</li>
-  <li><strong>[IM]</strong> <em>In Memoriam: Isaac McConihe</em>. Troy, N.Y., 1867 — memoir pp. 2–5.</li>
-  <li><strong>[BC]</strong> Bradsby, H. C. (ed.). <em>History of Bureau County, Illinois</em>. Chicago, 1885, pp. 585–586.</li>
-  <li><strong>[DB]</strong> DuBin, Alexander (comp.). <em>Five Hundred First Families of America</em>, 3rd ed., 1970–71, pp. 189–191.</li>
+<ol class="sources">
+<li><b>[DC]</b> Campbell, Diarmid A. <i>Seven Generations of the MacConnochie Campbells of Inverawe (1470–1705)</i>, Vol. I of <i>A History of the MacConnochie Campbells of Inverawe</i>. Privately published, 2011. Esp. pp. 84–85 (Iain og, Ireland, Meadowbank), the Tutor chapter, and the Archibald of Inverawe chapters.</li>
+<li><b>[RBS3]</b> MacGregor, Gordon. <i>The Red Book of Scotland</i>, 5th ed. (2025), Vol. 3: Buchanan–Campbell — Campbell of Inverawe (pp. 781–790, read in full 13 July 2026; source of the RD1/167, RD1/277, RPC V:241 and RPC VI:442 citations), Kilmartin (p. 791), Shirvan (p. 798), and Campbell of Argyll. Note: the Red Book carries no entry under any Mac Dhonnchaidh-derived surname; the family is treated wholly within Campbell of Inverawe.</li>
+<li><b>[GM corr.]</b> MacGregor, Gordon. Correspondence with James McConihe, July 2026 — the Tutor's sons; the 1607 Schaw bond; negative search of Argyll Sasines and Inveraray Bonds for Meadowbank. His reading of the 1613 entry (Archibald and Dugald) is confirmed by direct consultation of RPC X:179.</li>
+<li><b>[RPC]</b> <i>Register of the Privy Council of Scotland</i>, First Series, ed. D. Masson: Vol. X (1613–1616), pp. 176–182, complaint of Alexander Colquhoun of Luss and others v. Clan Gregor and assisters, 30 Nov 1613, entry at pp. 177–179 (Fol. 278a–279b) — <b>consulted 13 July 2026</b> via HathiTrust page images (University of California copy, id uc1.c2805898); verification against the NRS printed set pending. Also Vol. V, p. 241 (the Tutor, 2 Dec 1595); Vol. VI, p. 442 (Duncan, 6 Aug 1602); Vol. XII, p. 580 (Archibald of Inverawe cautioner, 1621) — via RBS3.</li>
+<li><b>[NRS-RD]</b> National Records of Scotland, Register of Deeds — RD1/167 (bond, Barbara Graham to George Schaw of Knockhill, 15 July 1607, 200 merks, son John named); RD1/277 (renunciation, Patrick MacDonochie alias Campbell, 6 Nov 1617). Cited from RBS3; originals to be ordered.</li>
+<li><b>[ARG]</b> Argyll Papers, Inveraray Castle — bundle 368 (ARG-11-02-109), pedigrees of the "Clan Dhonachie or Maconochies" incl. Meadowbank, compiled by Niall Campbell, 10th Duke of Argyll (copies requested).</li>
+<li><b>[W]</b> Wimberley, Capt. Douglas. <i>Memorials of Four Old Families</i>. Inverness, 1894 — Kilmartin note and the 1656 Duncanson–Stronchormaig marriage contract.</li>
+<li><b>[F]</b> Scott, Hew. <i>Fasti Ecclesiae Scoticanae</i>, Vol. 4 — John Duncanson, minister at Kilmartin, adm. 1655, deprived 1662.</li>
+<li><b>[ER]</b> Browne, George Waldo (ed.). <i>Early Records of Londonderry, Windham, and Derry, N.H.</i> Vol. II (1911), p. 80 and passim.</li>
+<li><b>[IM]</b> <i>In Memoriam: Isaac McConihe</i>. Troy, N.Y., 1867 — memoir pp. 2–5.</li>
+<li><b>[BC]</b> Bradsby, H. C. (ed.). <i>History of Bureau County, Illinois</i>. Chicago, 1885, pp. 585–586.</li>
+<li><b>[DB]</b> DuBin, Alexander (comp.). <i>Five Hundred First Families of America</i>, 3rd ed., 1970–71, pp. 189–191.</li>
+<li><b>[CCSNA]</b> Clan Campbell Society (North America), "Septs of Clan Campbell" (ccsna.org) — statement that John Dubh, Tutor of Inverawe, led the Scots gallowglasses fighting in Ireland at the end of the 16th century. Basis to be confirmed with Diarmid Campbell.</li>
 </ol>
-<p class="keyrow">Source codes in the index refer to this list. "d.s.p." = died without legitimate issue. Dates before 1752 are Old Style.</p>
 
-<footer>Prepared for James McConihe · research in collaboration with Lorna Kinnaird (Scotland) and correspondence with Gordon MacGregor · 9 July 2026. This is a working document: amber and red links are hypotheses under active investigation, not established descent. · <a href="index.html">Back to index of persons</a></footer>
+<p class="src">Source codes in the index refer to this list. "d.s.p." = died without legitimate issue. Dates before 1752 are Old Style.</p>
+
+<footer>Prepared for James McConihe · research in collaboration with Lorna Kinnaird (Scotland) and correspondence with Gordon MacGregor · 9 July 2026, revised 13 July 2026. This is a working document: amber and red links are hypotheses under active investigation, not established descent. · <a href="index.html">Back to index of persons</a></footer>
 
 </div>
 </body>
